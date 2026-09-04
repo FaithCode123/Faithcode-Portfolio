@@ -1,0 +1,49 @@
+<!DOCRYPE HTML>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de notes</title>
+    <link href="stylegne.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestionnaire de notes d'étudiants</h1>
+      <h3>Ajouter un étudiant</h3>
+      <input type="text" id="nom" placeholder="Nom de l'étudiant">
+      <input type="number" id="note1" placeholder="note1 / 20" min="0" max="20">
+      <input type="number" id="note2" placeholder="note2 / 20" min="0" max="20">
+      <input type="number" id="note3" placeholder="note3 / 20" min="0" max="20">
+      <button id="ajouter">Ajouter</button>
+      <h3>Rechercher</h3>
+    <input type="text" id="recherche" placeholder="Taper un nom..." style="width: 100%; padding: 8px; margin-bottom: 10px;">
+    <button id="exportCSV">📥 Exporter en CSV</button>
+<input type="file" id="importCSV" accept=".csv" style="display:none;">
+<label for="importCSV">📤 Importer un CSV</label>
+
+<!-- NOUVEAU : Zone Statistiques -->
+<div id="stats" style="margin-top: 20px; padding: 15px; background: #f0f8ff; border-radius: 8px;">
+  <h3>📊 Statistiques de la classe</h3>
+  <p><b>Total étudiants:</b> <span id="total">0</span></p>
+  <p><b>Moyenne de la classe:</b> <span id="moyenneClasse">0.00</span></p>
+  <p><b>Meilleur élève:</b> <span id="meilleur">-</span></p>
+  <p><b>À surveiller:</b> <span id="pire">-</span></p>
+</div>
+      <table>
+        <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Note 1</th>
+          <th>Note 2</th>
+          <th>Note 3</th>
+          <th>Moyenne</th>
+          <th>Mention</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="listeEtudiants"></tbody>
+      </table>
+    </div>
+    <script src="scriptgne.js"></script>
+  </body>
+</html>

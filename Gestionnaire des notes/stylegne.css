@@ -1,0 +1,68 @@
+body { 
+  font-family: Arial; 
+  background: #f0f2f5; 
+  padding: 20px;
+}
+.container { 
+  background: white; 
+  padding: 20px; 
+  max-width: 700px; 
+  margin: auto; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0,0,0,.2); 
+}
+input { 
+  padding: 8px; 
+  margin: 5px; 
+  width: 150px;
+}
+button { 
+  padding: 8px 15px; 
+  cursor: pointer; 
+  background: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+}
+button:hover { 
+  background: #0056b3;
+}
+table { 
+  width: 100%; 
+  margin-top: 20px; 
+  border-collapse: collapse; 
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap
+  
+}
+th, td { 
+  border: 1px solid #ddd; 
+  padding: 10px; 
+  text-align: center; 
+}
+th { 
+  background: #007bff; 
+  color: white; 
+}
+.btn-suppr { 
+  background: red; 
+  padding: 5px 10px; 
+}
+.mention-TB { 
+  color: green; 
+  font-weight: 
+  bold; 
+}
+.mention-B { 
+  color: blue; 
+}
+.mention-P { 
+  color: orange; 
+}
+.mention-AB {
+  color: pink;
+}
+.mention-A { 
+  color: red; 
+}

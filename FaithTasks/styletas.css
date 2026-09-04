@@ -1,0 +1,202 @@
+:root {
+    --primary: #0f766e;
+    --primary-dark: #115e59;
+    --danger: #ef4444;
+    --danger-dark: #dc2626;
+    --text: #1f2937;
+    --background: #f1f5f9;
+    --surface: #ffffff;
+    border: #e5e7eb;
+}
+
+body.dark-mode {
+    --text: #f1f5f9;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --border: #334155:
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+header {
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.column {
+    transition: background 0.3s ease, border 0.3s ease;
+    background: var(--surface);
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 500px;
+    border: 1px solid var(--border); /* Important pour le bleu */
+}
+#addTaskBtn {
+    padding: 10px 15px;
+    background: white;
+    color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    .board { grid-template-columns: 1fr; }
+}
+.btn-danger {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+.btn-danger:hover {
+    background: var(--danger-dark);
+}
+.task {
+    background: var(--background);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.task p {
+    margin: 0;
+    color: var(--text);
+}
+.task[data-priority="basse"] {
+    border-left: 4px solid #22c55e;
+}
+.task[data-priority="moyenne"] { /* CORRIGÉ : j'ai enlevé le .task en trop */
+    border-left: 4px solid #f59e0b;
+}
+.task[data-priority="haute"] {
+    border-left: 4px solid var(--danger);
+}
+.task.dragging {
+    opacity: 0.5;
+    transform: scale(1.05);
+    cursor: grabbing;
+}
+.column.drag-over { /* Ça marche maintenant car on l'ajoute sur .column */
+    background: #e0f2fe;
+    border: 2px dashed var(--primary);
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count {
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px 0 20px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    border: 2px solid var(--primary);
+    background: white;
+    color: var(--primary);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.task.hidden {
+    display: none;
+}
+
+#themeBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    background: var(--surface);
+    color: var(--text);
+    box-sizing: border-box;
+    transition: all 0.3S ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(15,118,110,0.2);
+}
+
+.task.overdue {
+    border-left: 4px solid var(--danger);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.overdue-badge {
+    color: var(--danger);
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+#exportBtn, #importBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#exportBtn:hover, #importBtn:hover {
+    background: var(--primary-dark);
+}

@@ -1,0 +1,33 @@
+body {
+  font-family: Arial;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.container {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+input {
+  width: 220px;
+  padding: 10px;
+}
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faite {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.6;
+}
