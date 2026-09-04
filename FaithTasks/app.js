@@ -1,3 +1,4 @@
+// test
 const addTaskBtn = document.getElementById('addTaskBtn');
 const modal = document.getElementById('taskModal');
 const closeBtn = document.querySelector('.close');
