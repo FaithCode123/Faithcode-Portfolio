@@ -1,6 +1,5 @@
-// 1. Animation d'apparition des projets au scroll
-const projets = document.querySelectorAll('.projet');
-
+// 1. Animation d'apparition au scroll
+const elements = document.querySelectorAll('.projet, .skill-card, .stat-item');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -10,39 +9,26 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-// Prépare l'animation
-projets.forEach(projet => {
-  projet.style.opacity = 0;
-  projet.style.transform = 'translateY(20px)';
-  projet.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(projet);
+elements.forEach(el => {
+  el.style.opacity = 0;
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
 });
 
 // 2. Copier l'email en 1 clic
-const email = document.querySelector('#contact p:nth-of-type(2)');
-
-if (email) {
-  email.style.cursor = 'pointer';
-  email.title = "Cliquer pour copier";
-  
-  email.addEventListener('click', () => {
+// const emailLink = document.querySelector('a[href^="mailto"]');
+if (emailLink) {
+  emailLink.addEventListener('click', (e) => {
+    e.preventDefault();
     const emailText = "chedrackgnambode5@gmail.com";
     navigator.clipboard.writeText(emailText);
-    
-    // Petit message de confirmation
-    const originalText = email.innerText;
-    email.innerText = "Email copié ! ✅";
-    email.style.color = "var(--primary)";
-    
-    setTimeout(() => {
-      email.innerText = originalText;
-      email.style.color = "var(--muted)";
-    }, 2000);
+    alert("Email copié : chedrackgnambode5@gmail.com ✅");
   });
 }
 
-// 3. Smooth scroll pour les liens internes
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// 3. Smooth scroll pour la navbar
+document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -51,4 +37,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-console.log("Portfolio de Faith chargé ✅");
+console.log("Portfolio Pro de Faith chargé ✅");

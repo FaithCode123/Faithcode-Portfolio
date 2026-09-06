@@ -3,72 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Faith - Développeur web / Faithcode.com</title>
+    <meta name="description" content="Faith Code - Développeur Web Frontend. Spécialisé en HTML, CSS, JavaScript. Créateur de FaithTasks. Disponible pour missions freelance." />
+    <title>Faith Code | Développeur Web Frontend</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-     <div class="image">
-      <img src="logogcn.png" id="photo">
-      <img src="logo2.png" alt="Logo">
-     </div>
+    
+    <header class="navbar">
+      <div class="container">
+        <img src="logo2.png" alt="Logo Faithcode" class="logo">
+        <nav>
+          <a href="#apropos">À propos</a>
+          <a href="#competences">Compétences</a>
+          <a href="#projets">Projets</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
+
     <main>
-       <h1>Salut, je suis Faith code</h1>
-      <p>Développeur web frontend / 4 mois d'expérience</p>
-      <img src="photo3.png" alt="Photo de Faith">
-      <section id="projets">
-        <h2>Mes Projets</h2>
-        
-        <div class="projet">
-          <h3>Calculatrice</h3>
-          <p>Une calculatrice réalisée avec du Javascript et qui permet de faire les conversions en dollar et euro</p>
-          <a href="./Calculatrice/indexcal.html">Voir le projet</a>
-        </div>
-
-        <div class="projet">
-          <h3>Projet Robbie Lens</h3>
-          <p>Un projet qui parle de la vie du photographe Robbie Lens, son portfolio et ses réalisations</p>
-          <a href="./Projet%20Robbie%20Lens/Index.html">Voir le projet</a>
-        </div>
-
-        <div class="projet">
-          <h3>AzerType</h3>
-          <p>Un jeu pour apprendre à taper vite en Javascript</p>
-          <a href="./AzertType/index.html">Voir le projet</a>
-        </div>
-
-        <div class="projet">
-          <h3>Gestionnaire de notes</h3>
-          <p>Permet à l'utilisateur de suivre et organiser ses notes</p>
-          <a href="./Gestionnaire des notes/indexgne.html">Voir le projet</a>
-        </div>
-
-        <div class="projet">
-          <h3>To-Do-List</h3>
-          <p>Un projet qui permet à l'utilisateur de programmer et gérer sa journée</p>
-          <a href="./To-Do-List/indextdl.html">Voir le projet</a>
-        </div>
-
-        <div class="projet">
-          <h3>FaitTasks</h3>
-          <p>Ce projet marque mon premier Trello, c'est fait avec du Javascript avancé</p>
-          <a href="./FaithTasks/indextas.html">Voir le projet</a>
+      <!-- SECTION 1: HERO PRO -->
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="hero-intro">Salut, je suis</p>
+            <h1>Faith Code</h1>
+            <h2>Développeur Web Frontend</h2>
+            <p class="hero-desc">Je conçois et développe des applications web rapides, accessibles et orientées résultats. 4 mois d'expérience en projets concrets.</p>
+            <div class="hero-boutons">
+              <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+              <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="photo3.png" alt="Photo de Faith Code">
+          </div>
         </div>
       </section>
 
+      <!-- SECTION 2: STATS POUR LES ENTREPRISES -->
+      <section class="stats">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <h3>+6</h3>
+            <p>Projets Réalisés</p>
+          </div>
+          <div class="stat-item">
+            <h3>+4</h3>
+            <p>Mois d'Expérience</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Motivation & Rigueur</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: A PROPOS -->
+      <section id="apropos" class="apropos">
+        <div class="container">
+          <h2>À propos de moi</h2>
+          <p>Passionné par le développement web, je transforme les maquettes en interfaces performantes. Mon objectif : créer des produits digitaux qui résolvent de vrais problèmes. Je maîtrise le cycle complet du frontend, de l'idée au déploiement sur GitHub.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 4: COMPETENCES -->
+      <section id="competences" class="competences">
+        <div class="container">
+          <h2>Mes Compétences Techniques</h2>
+          <div class="skills-grid">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Git & GitHub</div>
+            <div class="skill-card">Responsive Design</div>
+            <div class="skill-card">VS Code</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: PROJETS -->
+      <section id="projets">
+        <div class="container">
+          <h2>Mes Projets Récents</h2>
+          <div class="projets-grid">
+            
+            <div class="projet">
+              <h3>FaithTasks</h3>
+              <p>Mon premier Trello. Application de gestion de tâches avec Drag & Drop en Javascript avancé. Système de priorité et de colonnes.</p>
+              <a href="./FaithTasks/indextas.html">Voir le projet →</a>
+            </div>
+
+            <div class="projet">
+              <h3>Calculatrice</h3>
+              <p>Calculatrice avec convertisseur Dollar/Euro intégré. Interface propre et 100% fonctionnelle en Javascript.</p>
+              <a href="./Calculatrice/indexcal.html">Voir le projet →</a>
+            </div>
+
+            <div class="projet">
+              <h3>Gestionnaire de notes</h3>
+              <p>App pour suivre et organiser ses notes. Stockage local et interface intuitive pour la productivité.</p>
+              <a href="./Gestionnaire%20des%20notes/indexgne.html">Voir le projet →</a>
+            </div>
+
+            <div class="projet">
+              <h3>To-Do-List</h3>
+              <p>Outil pour programmer et gérer sa journée. Ajout, suppression et suivi des tâches en temps réel.</p>
+              <a href="./To-Do-List/indextdl.html">Voir le projet →</a>
+            </div>
+
+            <div class="projet">
+              <h3>AzerType</h3>
+              <p>Jeu éducatif pour apprendre à taper vite au clavier. Score, temps et niveaux de difficulté.</p>
+              <a href="./AzertType/index.html">Voir le projet →</a>
+            </div>
+
+            <div class="projet">
+              <h3>Projet Robbie Lens</h3>
+              <p>Portfolio vitrine pour un photographe. Intégration HTML/CSS responsive et design soigné.</p>
+              <a href="./Projet%20Robbie%20Lens/Index.html">Voir le projet →</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: CONTACT PRO -->
       <section id="contact">
-        <h2>contact</h2>
-        <p>Besoin d'un site web ? Contactez-moi !</p>
-        <a href="https://wa.me/2290196448338" class="lien-icone">
-        <img src="logo_whatsapp_fond_transparent.png" alt="Logo Whatsapp">
-        </a>
-        <a href="https://www.facebook.com/chedrack.gnambode.18">
-          <img src="logofacebook.png" alt="Logo facebook">
-        </a>
-        <p>Email: chedrackgnambode5@gmail.com</p>
+        <div class="container">
+          <h2>Travaillons ensemble</h2>
+          <p>Vous avez un projet web ? Une opportunité ? Parlons-en.</p>
+          <div class="contact-links">
+            <a href="https://wa.me/2290196448338" class="contact-btn">
+              <img src="logo_whatsapp_fond_transparent.png" alt="Whatsapp"> WhatsApp
+            </a>
+            <a href="https://www.facebook.com/chedrack.gnambode.18" class="contact-btn">
+              <img src="logofacebook.png" alt="Facebook"> Facebook
+            </a>
+            <a href="mailto:chedrackgnambode5@gmail.com" class="contact-btn">
+              Email
+            </a>
+          </div>
+        </div>
       </section>
     </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Faith Code. Développé avec HTML, CSS & JS.</p>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

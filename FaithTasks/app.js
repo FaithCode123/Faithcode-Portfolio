@@ -1,4 +1,4 @@
-// test
+// Je suis en train de tester la branche
 const addTaskBtn = document.getElementById('addTaskBtn');
 const modal = document.getElementById('taskModal');
 const closeBtn = document.querySelector('.close');
