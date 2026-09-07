@@ -1,0 +1,35 @@
+:root { --rouge:#ef4444; --vert:#22c55e; --bleu:#3b82f6; --jaune:#eab308; --bg:#0f172a; }
+body { background: var(--bg); color: white; font-family: "Inter", sans-serif; display: flex; justify-content: center; padding: 20px; }
+.container { background: #1e293b; padding: 20px; border-radius: 20px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+h1 { text-align: center; color: #0f766e; }
+.joueurs { display: flex; gap: 10px; justify-content: center; margin-bottom: 15px; }
+.joueur { padding: 8px 15px; border-radius: 20px; background: #334155; font-weight: 700; transition: 0.3s; }
+.joueur.actif { transform: scale(1.15); border: 3px solid white; }
+#plateau {
+  width: 500px; height: 500px; background: white; display: grid;
+  grid-template-columns: repeat(15, 1fr); grid-template-rows: repeat(15, 1fr);
+  border: 8px solid #334155; border-radius: 15px; margin: 0 auto;
+}
+.case { border: 1px solid #e2e8f0; display: flex; justify-content: center; align-items: center; }
+.rouge-bg { background: var(--rouge); }.vert-bg { background: var(--vert); }
+.bleu-bg { background: var(--bleu); }.jaune-bg { background: var(--jaune); }
+.pion { width: 70%; height: 70%; border-radius: 50%; border: 3px solid white; cursor: pointer; transition: 0.3s; box-shadow: 0 3px 10px rgba(0,0,0,0.4); }
+.pion:hover { transform: scale(1.3); }
+.pion.jouable { animation: pulse 0.8s infinite; }
+@keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.4)} }
+
+.zone-de { text-align: center; margin-top: 20px; }
+.de {
+  width: 80px; height: 80px; background: white; color: black; font-size: 3rem;
+  font-weight: 900; display: flex; justify-content: center; align-items: center;
+  margin: 0 auto 15px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+.de.lancer { animation: rouler 0.5s ease; }
+@keyframes rouler {
+ 0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(360deg) scale(1.2); }
+  100% { transform: rotate(720deg) scale(1); }
+}
+#btn-de { padding: 15px 40px; font-size: 1.2rem; font-weight: 800; background: #0f766e; color: white; border: none; border-radius: 12px; cursor: pointer; }
+#btn-de:disabled { background: #475569; }
+#message { text-align: center; margin-top: 10px; font-weight: 600; color: #94a3b8; }

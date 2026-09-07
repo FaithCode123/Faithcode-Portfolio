@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ludo Pro - Faith Code</title>
+  <link rel="stylesheet" href="styleludo.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 LUDO PRO</h1>
+    <div class="joueurs">
+      <div class="joueur actif" id="j-rouge">🔴 Rouge</div>
+      <div class="joueur" id="j-vert">🟢 Vert</div>
+      <div class="joueur" id="j-bleu">🔵 Bleu</div>
+      <div class="joueur" id="j-jaune">🟡 Jaune</div>
+    </div>
+    <div id="plateau"></div>
+    <div class="zone-de">
+      <div id="de" class="de">?</div>
+      <button id="btn-de">LANCER</button>
+    </div>
+    <div id="message">Au tour de Rouge</div>
+  </div>
+  <script src="scriptludo.js"></script>
+</body>
+</html>
