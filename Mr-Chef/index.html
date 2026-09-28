@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Chef — Plats rapides & sandwichs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Mr <span>Chef</span></a>
+
+        <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
+        <nav class="nav">
+            <a href="#accueil">Accueil</a>
+            <a href="#menu">Menu</a>
+            <a href="#services">Services</a>
+            <a href="#formations">Formations</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="accueil">
+            <div class="hero-content">
+                <p class="eyebrow">MAISON DES PLATS RAPIDES & SANDWICH</p>
+                <h1>Le goût qui vous donne envie de revenir.</h1>
+                <p>
+                    Découvrez les spécialités de Mr Chef :
+                    des plats généreux, savoureux et préparés avec passion.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn primary">Découvrir le menu</a>
+                    <a href="#contact" class="btn secondary">Nous contacter</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <!-- Remplace "plat.jpg" par le nom de ta photo du plat -->
+                <img src="plat2.jpg" alt="Plat savoureux de Mr Chef">
+            </div>
+        </section>
+
+        <section class="section" id="menu">
+            <div class="section-title">
+                <p class="eyebrow">NOS SPÉCIALITÉS</p>
+                <h2>Un plat pour chaque envie</h2>
+                <p>Voici quelques exemples de ce que vous pouvez découvrir chez Mr Chef.</p>
+            </div>
+
+            <div class="filters">
+                <button class="filter active" data-category="all">Tous</button>
+                <button class="filter" data-category="plats">Plats</button>
+                <button class="filter" data-category="sandwichs">Sandwichs</button>
+                <button class="filter" data-category="patisserie">Pâtisserie</button>
+            </div>
+
+            <div class="cards" id="menu-container"></div>
+        </section>
+
+        <section class="section services" id="services">
+            <div class="section-title">
+                <p class="eyebrow">NOS SERVICES</p>
+                <h2>Plus qu'un restaurant</h2>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <span>🍽️</span>
+                    <h3>Gastronomie variée</h3>
+                    <p>Des plats locaux et internationaux préparés avec passion.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🍰</span>
+                    <h3>Pâtisserie</h3>
+                    <p>Gâteaux, viennoiseries et douceurs pour toutes les occasions.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🥫</span>
+                    <h3>Sauces variées</h3>
+                    <p>Des sauces savoureuses et prêtes à l'emploi.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section formations" id="formations">
+            <div class="section-title">
+                <p class="eyebrow">FORMATIONS</p>
+                <h2>Apprenez aujourd'hui, réussissez demain</h2>
+            </div>
+
+            <div class="formation-grid">
+                <article class="formation-card">
+                    <h3>Chef exécutif</h3>
+                    <p>Devenez un manager complet et performant en cuisine professionnelle.</p>
+                </article>
+
+                <article class="formation-card">
+                    <h3>Chef cuisinier</h3>
+                    <p>Maîtrisez l'art culinaire et développez votre expertise en cuisine.</p>
+                </article>
+
+                <article class="formation-card">
+                    <h3>Hôtesse</h3>
+                    <p>Formation en accueil, service, étiquette et relation client.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div>
+                <p class="eyebrow">CONTACTEZ-NOUS</p>
+                <h2>Venez découvrir Mr Chef à Sèmè-Podji.</h2>
+                <p>Dans la von de l'ancienne maternité après la mairie.</p>
+            </div>
+
+            <div class="contact-box">
+                <p><strong>Restaurant :</strong> 11h à 24h</p>
+                <p><strong>Formations :</strong> 8h à 11h</p>
+                <a href="tel:0156758370">📞 01 56 75 83 70</a>
+                <a href="tel:0153428248">📞 01 53 42 82 48</a>
+                <a href="tel:0192624922">📞 01 92 62 49 22</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Mr Chef — La qualité, l'hygiène et votre satisfaction sont notre priorité.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
