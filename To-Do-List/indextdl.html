@@ -1,20 +1,43 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma To-Do List</title>
-    <link href="styletdl.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ma To-Do List PRO</title>
+    <link href="styletdl.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <h1> Ma To-Do List</h1>
-      <input type="text" id="tache" placeholder="Ajouter une tâche">
-      <button id="ajouter">Ajouter</button>
-      <p id="compteur">0 tâche </p>
+      <h1>Ma To-Do List <span>PRO</span></h1>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="tache"
+          placeholder="Qu'est-ce que tu dois faire ?"
+          autofocus
+        />
+        <button id="ajouter">+</button>
+      </div>
+
+      <div class="filtres">
+        <button class="filtre active" data-filtre="toutes">Toutes</button>
+        <button class="filtre" data-filtre="actives">Actives</button>
+        <button class="filtre" data-filtre="terminees">Terminées</button>
+      </div>
+
       <ul id="liste"></ul>
-      
+
+      <div class="footer">
+        <p id="compteur">0 tâche restante</p>
+        <button id="effacer">Effacer terminées</button>
+      </div>
     </div>
-  <script src="scripttdl.js"></script>
+
+    <script src="scripttdl.js"></script>
   </body>
 </html>

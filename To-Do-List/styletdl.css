@@ -1,33 +1,16 @@
-body {
-  font-family: Arial;
-  background: #f0f2f5;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-.container {
-  background: white;
-  padding: 30px;
-  width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-}
-input {
-  width: 220px;
-  padding: 10px;
-}
-button {
-  padding: 10px;
-  cursor: pointer;
-}
-li {
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faite {
-  text-decoration: line-through;
-  color: gray;
-  opacity: 0.6;
-}
+body { font-family: 'Inter', Arial; background: #f8fafc; display: flex; justify-content: center; margin-top: 50px; }
+.container { background: white; padding: 30px; width: 400px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+h1 { margin: 0 0 20px; font-size: 24px; } h1 span { background: #3b82f6; color: white; font-size: 12px; padding: 3px 8px; border-radius: 20px; margin-left: 8px; vertical-align: middle;}
+.input-group { display: flex; gap: 8px; }
+input { flex: 1; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; outline: none; } input:focus { border-color: #3b82f6; }
+#ajouter { width: 44px; background: #3b82f6; color: white; border: none; border-radius: 10px; font-size: 22px; }
+.filtres { display: flex; gap: 8px; margin: 20px 0; }
+.filtre { flex: 1; padding: 6px; border: 1px solid #e2e8f0; background: white; border-radius: 20px; font-size: 13px; cursor: pointer;}
+.filtre.active { background: #1e293b; color: white; border-color: #1e293b; }
+li { list-style: none; padding: 12px 0; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #f1f5f9; }
+li input[type="checkbox"] { width: 18px; height: 18px; }
+li.faite span { text-decoration: line-through; color: #94a3b8; }
+li span { flex: 1; }
+li button { background: #fee2e2; color: #ef4444; border: none; width: 28px; height: 28px; border-radius: 50%; cursor: pointer;}
+.footer { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; font-size: 13px; color: #64748b; }
+#effacer { background: none; border: none; color: #64748b; cursor: pointer; text-decoration: underline; }

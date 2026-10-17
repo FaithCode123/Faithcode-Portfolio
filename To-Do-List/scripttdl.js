@@ -1,33 +1,105 @@
 document.addEventListener("DOMContentLoaded", function() {
-  let champ = document.getElementById("tache");
-  let bouton = document.getElementById("ajouter");
-  let liste = document.getElementById("liste");
-  let compteur = document.getElementById("compteur");
-  let nombreTaches = 0;
+  const champ = document.getElementById("tache");
+  const bouton = document.getElementById("ajouter");
+  const liste = document.getElementById("liste");
+  const compteur = document.getElementById("compteur");
+  const btnEffacer = document.getElementById("effacer");
+  const filtresBtn = document.querySelectorAll(".filtre");
 
-  bouton.addEventListener("click", ajouterTache);
+  // 1. CHARGEMENT depuis localStorage
+  let taches = JSON.parse(localStorage.getItem("taches")) || [];
+  let filtreActuel = "toutes";
 
-  function ajouterTache(){ 
+  function sauvegarder() {
+    localStorage.setItem("taches", JSON.stringify(taches));
+  }
+
+  function afficher() {
+    liste.innerHTML = "";
+
+    // Filtrage
+    let tachesAffichees = taches.filter(t => {
+      if (filtreActuel === "actives") return !t.faite;
+      if (filtreActuel === "terminees") return t.faite;
+      return true;
+    });
+
+    tachesAffichees.forEach((tache) => {
+      // On récupère le vrai index dans le tableau original
+      let vraiIndex = taches.indexOf(tache);
+
+      let li = document.createElement("li");
+      if (tache.faite) li.classList.add("faite");
+
+      let checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = tache.faite;
+      checkbox.onchange = () => {
+        taches[vraiIndex].faite = checkbox.checked;
+        sauvegarder();
+        afficher();
+      };
+
+      let span = document.createElement("span");
+      span.textContent = tache.texte;
+
+      let btnSuppr = document.createElement("button");
+      btnSuppr.textContent = "✕";
+      btnSuppr.onclick = (e) => {
+        e.stopPropagation();
+        taches.splice(vraiIndex, 1);
+        sauvegarder();
+        afficher();
+      };
+
+      li.appendChild(checkbox);
+      li.appendChild(span);
+      li.appendChild(btnSuppr);
+      liste.appendChild(li);
+    });
+
+    // Compteur pro : "2 restantes"
+    let restantes = taches.filter(t => !t.faite).length;
+    compteur.textContent = restantes === 0 
+      ? "Tout est fait ! 🎉" 
+      : `${restantes} tâche${restantes > 1 ? "s" : ""} restante${restantes > 1 ? "s" : ""}`;
+  }
+
+  function ajouterTache() {
     let texte = champ.value.trim();
-    if(texte===""){ alert("Veuillez écrire une tâche."); return; } 
-    let li = document.createElement("li");
-    li.textContent = texte;
-    li.addEventListener("click", function(){ li.classList.toggle("faite"); });
-    let btnSuppr = document.createElement("button");
-    btnSuppr.textContent = "X";
-    btnSuppr.style.marginLeft = "10px";
-    btnSuppr.onclick = function(event){
-      event.stopPropagation();
-      li.remove();
-      nombreTaches--;
-      compteur.textContent = nombreTaches + " tâche" + (nombreTaches>1?"s":"");
-    };
-    li.appendChild(btnSuppr);
-    liste.appendChild(li);
-    nombreTaches++;
-    compteur.textContent = nombreTaches + " tâche" + (nombreTaches>1?"s":"");
-    champ.value="";
+    if (texte === "") {
+      alert("Veuillez écrire une tâche.");
+      return;
+    }
+    taches.push({ texte: texte, faite: false });
+    sauvegarder();
+    afficher();
+    champ.value = "";
     champ.focus();
   }
+
+  // EVENTS
+  bouton.addEventListener("click", ajouterTache);
+  champ.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") ajouterTache();
+  });
+
+  filtresBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelector(".filtre.active")?.classList.remove("active");
+      btn.classList.add("active");
+      filtreActuel = btn.dataset.filtre;
+      afficher();
+    });
+  });
+
+  btnEffacer.addEventListener("click", () => {
+    taches = taches.filter(t => !t.faite);
+    sauvegarder();
+    afficher();
+  });
+
+  // Premier affichage
+  afficher();
 });
 
