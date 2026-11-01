@@ -22,7 +22,7 @@ Je transforme les idées en produits digitaux concrets avec HTML, CSS et JavaScr
 | **To-Do-List**                                                    | Outil de productivité pour gérer sa journée.                                   | HTML, CSS, JavaScript                                                                                    |
 | **AzerType**                                                      | Jeu éducatif pour apprendre à taper vite au clavier.                           | HTML, CSS, JavaScript                                                                                    |
 | **Robbie Lens**                                                   | Portfolio vitrine responsive pour un photographe.                              | HTML, CSS                                                                                                |
-| Mr Chef                                                           | Site restaurant moderne avec commande en ligne, panier, responsive. `          |
+| Mr Chef                                                           | Site restaurant moderne avec commande en ligne, panier, responsive. `          | HTML, CSS et Javascript
 | **Site de restaurant Mr Chef** : Mon projet React le plus récent. | React, Vite, Vercel                                                            | [Live Demo](https://mon-chef-react.vercel.app/) - [Code](https://github.com/FaithCode123/mon-chef-react) |
 
 ---
