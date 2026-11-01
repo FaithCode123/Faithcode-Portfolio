@@ -29,7 +29,7 @@ Je transforme les idées en produits digitaux concrets avec HTML, CSS et JavaScr
 
 ### 🛠️ Compétences Techniques
 
-- **Frontend** : HTML5, CSS3, JavaScript, react
+- **Frontend** : HTML5, CSS3, JavaScript, React
 - **Outils** : Git, GitHub, VS Code, Vercel
 - **Concepts** : Responsive Design, UI/UX, Animation CSS, Intersection Observer
 
