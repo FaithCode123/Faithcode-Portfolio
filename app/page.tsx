@@ -31,7 +31,7 @@ export default function Home() {
             <h1 className="text-[42px] md:text-[68px] leading-[1.05] font-extrabold tracking-tight mt-6">
               Je transforme les problèmes
               <br />
-              du Bénin en <span className="text-[#e9407a]">applications web.</span>
+              du Bénin en <span className="text-[#e9407a]">sites et applications web.</span>
             </h1>
 
             <p className="text-lg text-zinc-400 leading-relaxed max-w-[650px] mt-6">
@@ -51,8 +51,8 @@ export default function Home() {
           </div>
 
           {/* TA PHOTO - PETITE, EN ROND */}
-          <div className="w-[260px] h-[260px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-4 border-[#e9407a] shrink-0">
-            <img src="/photo3.png" alt="Faith Code" className="w-full h-full object-cover" />
+          <div className="w-[260px] h-[260px] md:w-[300px] md:h-[300px] rounded-2xl aspect-[4/5] object-contain overflow-hidden border-4 border-[#e9407a] shrink-0">
+            <img src="/photo3.png" alt="Faith Code" className="w-full h-full object-contain" />
           </div>
         </div>
 
