@@ -79,16 +79,20 @@ export default function Home() {
       </section>
 
       {/* ===== COMPÉTENCES ===== */}
-      <section id="competences" className="max-w-[900px] mx-auto px-5 py-10">
-        <h2 className="text-3xl font-extrabold">Mes Compétences</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
-          {["Next.js 15", "TypeScript", "Tailwind CSS", "React", "JavaScript", "HTML5 / CSS3", "Git & GitHub", "Vercel"].map((skill) => (
-            <div key={skill} className="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-4 text-center font-semibold text-sm">
-              {skill}
-            </div>
-          ))}
-        </div>
-      </section>
+<section id="competences" className="max-w-[900px] mx-auto px-5 py-16">
+  <h2 className="text-3xl font-extrabold">Mes Compétences Techniques</h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center font-bold transition hover:border-pink-500 hover:-translate-y-1 hover:shadow-lg">Next.js 15</div>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center font-bold transition hover:border-pink-500 hover:-translate-y-1 hover:shadow-lg">TypeScript</div>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center font-bold transition hover:border-pink-500 hover:-translate-y-1 hover:shadow-lg">Tailwind CSS</div>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center font-bold transition hover:border-pink-500 hover:-translate-y-1 hover:shadow-lg">React</div>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center font-bold transition hover:border-pink-500 hover:-translate-y-1 hover:shadow-lg">JavaScript</div>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center font-bold transition hover:border-pink-500 hover:-translate-y-1 hover:shadow-lg">HTML5 / CSS3</div>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center font-bold transition hover:border-pink-500 hover:-translate-y-1 hover:shadow-lg">Git, GitHub &<br />Vercel</div>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center font-bold transition hover:border-pink-500 hover:-translate-y-1 hover:shadow-lg">Responsive<br />Design</div>
+  </div>
+</section>
 
       {/* ===== PROJETS - VERSION RECTANGLES ===== */}
       <section id="projets" className="max-w-[1000px] mx-auto px-5 py-16">
