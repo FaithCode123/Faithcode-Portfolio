@@ -12,6 +12,27 @@ Créateur de **CV229.ai** - le générateur de CV pro qui aide les jeunes bénin
 
 ## 🚀 Mes Projets
 
+### Devis229 🇧🇯
+
+Application web pour les artisans au Bénin (maçons, menuisiers, électriciens).
+
+**Problème :** Ils faisaient leurs devis sur Word. C'était long et sans suivi de paiement.
+**Solution :** En 2 minutes, ils créent un devis PDF avec leur bannière, leur total, leur avance et leur reste à payer.
+
+**Fonctionnalités :**
+
+- Création de devis avec tableau matériels + main d'oeuvre
+- Calcul automatique Total / Avance / Reste
+- Avance cachée si 0, affichée si payée
+- Génération PDF avec bannière de l'entreprise
+- Numéro du client sur la facture
+- Envoi WhatsApp en 1 clic
+- Photo stockée en IndexedDB
+
+**Tech :** Next.js - TypeScript - Tailwind - jsPDF - IndexedDB
+
+👉 [Voir la démo] https://devis229-two.vercel.app | [Voir le code] https://github.com/FaithCode123/devis229
+
 ### 🔥 CV229.ai - Générateur de CV Pro
 
 Le projet à la une. Aide les jeunes béninois à créer un CV professionnel en 2 minutes.

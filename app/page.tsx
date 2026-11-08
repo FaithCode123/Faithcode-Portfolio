@@ -36,8 +36,8 @@ export default function Home() {
 
             <p className="text-lg text-zinc-400 leading-relaxed max-w-[650px] mt-6">
               Enseignant le jour. Développeur de produits la nuit.
-              Créateur de <strong className="text-white">CV229.ai</strong> - le générateur
-              de CV pro qui aide les jeunes béninois en 2 minutes.
+              Créateur de <strong className="text-white">DEVIS229</strong> - le générateur
+              de DEVIS pro qui aide les jeunes béninois artisans en 2 minutes.
             </p>
 
             <div className="flex flex-wrap gap-3 mt-8">
@@ -50,7 +50,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* TA PHOTO - PETITE, EN ROND */}
+          
           <div className="w-[260px] h-[260px] md:w-[300px] md:h-[300px] rounded-2xl aspect-[4/5] object-contain overflow-hidden border-4 border-[#e9407a] shrink-0">
             <img src="/photo3.png" alt="Faith Code" className="w-full h-full object-contain" />
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
 
         <div className="flex gap-10 md:gap-14 mt-14 pt-8 border-t border-zinc-800">
           <div><h3 className="text-3xl font-extrabold">+10</h3><p className="text-zinc-500 text-sm">Projets livrés</p></div>
-          <div><h3 className="text-3xl font-extrabold">1</h3><p className="text-zinc-500 text-sm">Produit en production</p></div>
+          <div><h3 className="text-3xl font-extrabold">3</h3><p className="text-zinc-500 text-sm">Produits en production</p></div>
           <div><h3 className="text-3xl font-extrabold">100%</h3><p className="text-zinc-500 text-sm">Projets terminés</p></div>
         </div>
       </main>
@@ -68,8 +68,8 @@ export default function Home() {
         <h2 className="text-3xl font-extrabold">À propos de moi</h2>
         <p className="text-zinc-400 leading-relaxed mt-4 text-lg">
           Passionné par le développement web, je transforme les maquettes en produits
-          qui résolvent de vrais problèmes. Mon dernier produit <strong className="text-white">CV229.ai</strong> aide
-          les jeunes béninois à créer un CV pro en 2 minutes. Je maîtrise le cycle complet
+          qui résolvent de vrais problèmes. Mon dernier produit <strong className="text-white">DEVIS229</strong> aide
+          les jeunes béninois artisan à créer un devis pro en 2 minutes. Je maîtrise le cycle complet
           du frontend, de l&apos;idée au déploiement continu sur Vercel.
         </p>
         <p className="text-zinc-400 leading-relaxed mt-4">
@@ -101,11 +101,35 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-6 mt-8">
 
+          {/* --- DEVIS229 --- */}
+<div className="bg-zinc-900 border-2 border-[#e9407a] rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300">
+  <div className="h-[220px] relative overflow-hidden bg-gradient-to-br from-[#e9407a] via-[#1b2a4e] to-black flex flex-col items-center justify-center p-6 text-center">
+    <img src="/devis229.png" alt="Devis229" className="absolute inset-0 w-full h-full object-cover object-top" />
+    <span className="absolute top-3 left-3 bg-[#e9407a] text-[11px] font-extrabold px-3 py-1 rounded-full z-10">🔥 PROJET À LA UNE</span>
+  </div>
+  <div className="p-6">
+    <h3 className="font-bold text-xl">DEVIS229 - Générateur de DEVIS Pro</h3>
+    <p className="text-zinc-400 text-sm mt-2 leading-relaxed">
+      Application web pour les artisans au Bénin (maçons, menuisiers, électriciens). Ils faisaient leurs devis sur Word. C'était long et sans suivi de paiement. En 2 minutes, ils créent un devis PDF avec leur bannière, leur total, leur avance et leur reste à payer.
+    </p>
+    <div className="flex flex-wrap gap-2 mt-4">
+      <span className="text-xs bg-zinc-800 px-2.5 py-1 rounded-full">Next.js 15</span>
+      <span className="text-xs bg-zinc-800 px-2.5 py-1 rounded-full">TypeScript</span>
+      <span className="text-xs bg-zinc-800 px-2.5 py-1 rounded-full">Tailwind</span>
+      <span className="text-xs bg-zinc-800 px-2.5 py-1 rounded-full">jsPDF</span>
+    </div>
+    <div className="flex gap-3 mt-5">
+      <a href="https://devis229-two.vercel.app" target="_blank" className="flex-1 text-center bg-[#e9407a] px-4 py-3 rounded-[10px] font-bold text-sm">Voir le Live 🚀</a>
+      <a href="https://github.com/FaithCode123/devis229" target="_blank" className="flex-1 text-center bg-white text-black px-4 py-3 rounded-[10px] font-bold text-sm">Code GitHub</a>
+    </div>
+  </div>
+</div>
+
           {/* --- CV229 --- */}
           <div className="bg-zinc-900 border-2 border-[#e9407a] rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300">
             <div className="h-[220px] relative overflow-hidden bg-gradient-to-br from-[#e9407a] via-[#1b2a4e] to-black flex flex-col items-center justify-center p-6 text-center">
               <img src="/cv229.png" alt="CV229.ai" className="absolute inset-0 w-full h-full object-cover object-top" />
-              <span className="absolute top-3 left-3 bg-[#e9407a] text-[11px] font-extrabold px-3 py-1 rounded-full z-10">🔥 PROJET À LA UNE</span>
+              <span className="absolute top-3 left-3 bg-white text-black text-[11px] font-extrabold px-3 py-1 rounded-full z-10">⭐ PRODUIT LE PLUS UTILISÉ</span>
             </div>
             <div className="p-6">
               <h3 className="font-bold text-xl">CV229.ai - Générateur de CV Pro</h3>
@@ -170,7 +194,7 @@ export default function Home() {
                 <p className="text-[11px] opacity-80">HTML • CSS • JS</p>
               </div>
             ))}
-            <a href="https://github.com/FaithCode123/Faithcode-Portfolio" target="_blank" className="bg-white text-black rounded-xl p-4 text-center hover:scale-105 transition flex flex-col items-center justify-center">
+            <a href="https://github.com/FaithCode123/portfolio-faithcode" target="_blank" className="bg-white text-black rounded-xl p-4 text-center hover:scale-105 transition flex flex-col items-center justify-center">
               <span className="text-3xl">💻</span>
               <p className="font-bold text-sm mt-2">Voir le code</p>
               <p className="text-[11px] opacity-70">Sur GitHub →</p>
@@ -180,7 +204,6 @@ export default function Home() {
       </section>
 
       {/* ===== CONTACT ===== */}
-      {/* ===== CONTACT - AVEC LOGOS COMME L'ANCIENNE VERSION ===== */}
 <section id="contact" className="max-w-[900px] mx-auto px-5 py-16 text-center">
   <h2 className="text-3xl md:text-4xl font-extrabold">Travaillons ensemble</h2>
   <p className="text-zinc-400 mt-4">Vous avez un projet web ? Une opportunité ? Parlons-en.</p>
